@@ -1,4 +1,6 @@
 window.onload = () => {
+// the game is working but without showing logos
+
     const cards = document.querySelectorAll(".card")
     const resetBtn = document.getElementById("reset")
 
@@ -25,7 +27,6 @@ window.onload = () => {
                 reset(cards)
             }
             let clickedtwo = document.querySelectorAll(".clicked")
-            console.log(clickedtwo)
 
             if(clickedtwo.length==2){
                 first = clickedtwo[0].innerHTML
