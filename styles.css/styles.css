@@ -70,14 +70,17 @@ body{
 
 .clicked{
     transform: rotateY(180deg);
-    
+
 }
 
 .card .back{
     display:none;
 }
 
-
+.correct{
+    transform: rotateY(180deg);
+    background-color: lightgreen;
+}
 
 .reset{
     padding: 10px;

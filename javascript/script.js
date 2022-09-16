@@ -19,12 +19,24 @@ window.onload = () => {
             clicked+=1
             card.classList.toggle("clicked")
             
-            }
-            else if(clicked == 2){
+            } else if(clicked == 2){
+               
                 clicked = 0
                 reset(cards)
             }
-            
+            let clickedtwo = document.querySelectorAll(".clicked")
+            console.log(clickedtwo)
+
+            if(clickedtwo.length==2){
+                first = clickedtwo[0].innerHTML
+                second = clickedtwo[1].innerHTML
+                console.log(first,second)
+
+                if(first == second){
+                    clickedtwo[0].classList.add("correct")
+                    clickedtwo[1].classList.add("correct")
+                }
+            }
         })
 
     });
