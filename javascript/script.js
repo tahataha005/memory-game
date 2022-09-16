@@ -1,9 +1,10 @@
 window.onload = () => {
     const cards = document.querySelectorAll(".card")
     const resetBtn = document.getElementById("reset")
-    console.log(cards)
 
+    const scorebox = document.getElementById("score")
     let clicked = 0
+    let score = 0;
 
     const reset = (cards) => {
         cards.forEach(card => {
@@ -14,7 +15,6 @@ window.onload = () => {
     cards.forEach(card => {
         
         card.addEventListener("click", () => {
-            console.log(clicked)
             if(clicked == 0 || clicked == 1){
             clicked+=1
             card.classList.toggle("clicked")
@@ -30,13 +30,19 @@ window.onload = () => {
             if(clickedtwo.length==2){
                 first = clickedtwo[0].innerHTML
                 second = clickedtwo[1].innerHTML
-                console.log(first,second)
 
                 if(first == second){
                     clickedtwo[0].classList.add("correct")
                     clickedtwo[1].classList.add("correct")
+                    score += 1
+                    scorebox.innerHTML = score
+                    console.log(score)
                 }
             }
+
+
+
+
         })
 
     });
